@@ -18,7 +18,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="weather.css">
     <title>Conditional Statements Example</title>
 </head>
 <body>
@@ -32,6 +31,32 @@
     <p id="hint"></p>
 
 
-    <script src="uppg7.js"></script>
+    <script>
+let valueSlider=document. getElementById("valueSlider");
+let selectedNumber=document.getElementById("selectedNumber");
+let hint=document.getElementById("hint");
+let number= 64;
+
+valueSlider.addEventListener("input", function(){
+    selectedNumber.innerText=valueSlider.value;
+    checkNumber(valueSlider.value);
+});
+
+function checkNumber (RightNumber){
+    if(RightNumber>number){
+        hint.innerText="It's too high";
+        hint.style.fontSize="100px";
+    }
+    else if(RightNumber<number){
+        hint.innerText="It's to low";
+        hint.style.fontSize="100px";
+    }
+    else if(RightNumber==number){
+    hint.innerText="Right on the spot";
+    hint.style.fontSize="100px";
+    }
+}
+
+    </script>
 </body>
 </html>

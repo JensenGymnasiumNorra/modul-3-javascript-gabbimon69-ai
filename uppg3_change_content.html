@@ -14,9 +14,18 @@
     <button onclick="showCarbonara()">Show carbonara ingredients</button>
     <button onclick="showPizza()">Show pizza ingredients</button>
 
-    <div id="ingredients"></div>
+    <div id="ingredients">
+      
+    </div>
 
     <script>
+      function showCarbonara(){
+        document.getElementById("ingredients").innerHTML = "      <p>Stek bara bacon, koka pasta och lägg till ost</p>";
+      
+      }
+      function showPizza(){
+        document.getElementById("ingredients").innerHTML = "<p> Ta ett bröd, lägg till ost och salami samt lägg den i ugnen</p>"
+      }
       // TODO: Skapa funktionerna showCarbonara() och showPizza() för att visa ingredienserna för respektive recept i diven ingredients
     </script>
   </body>
